@@ -236,6 +236,8 @@ export default class StoreHandle {
           Object.assign(message, msg);
           await this.repos.messageDics.save(dictionary);
         }
+
+        ev.emit("chats.upsert", newChats); // similar to "messages.upsert" below 🤷‍♂️😬        
       }
     );
     ev.on("contacts.update", async (updates) => {
