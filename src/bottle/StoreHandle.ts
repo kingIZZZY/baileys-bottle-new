@@ -255,7 +255,7 @@ export default class StoreHandle {
       }
     });
     ev.on("chats.upsert", (newChats) => {
-      try {
+      //try {
         newChats.forEach((chat) => {
           this.repos.chats.upsert(
             { ...chat, DBAuth: { id: this.auth.id } },
@@ -264,7 +264,7 @@ export default class StoreHandle {
             }
           );
         });
-      } catch {}
+      //} catch {}
     });
     ev.on("chats.update", async (updates) => {
       for (let update of updates) {
