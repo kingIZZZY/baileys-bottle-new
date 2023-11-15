@@ -9,7 +9,7 @@ import {
 import { Auth } from "./Auth";
 
 @Entity()
-@Unique(["dBAuthId", "id"])
+@Unique(["DBAuth", "id"])
 export class Chat {
   @PrimaryGeneratedColumn()
   DBId: number;
